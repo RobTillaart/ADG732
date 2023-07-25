@@ -51,8 +51,8 @@ public:
 
   void setChannel(uint8_t channel)
   {
-    _channel = channel & 0x0F;
-    write(_channel, LOW, LOW);
+    _channel = channel & 0x1F;
+    write(_channel, LOW);
   }
 
 
@@ -71,14 +71,14 @@ public:
   void allOff()
   {
     _channel = ADG732_ALLOFF;
-    write(_channel, LOW, HIGH);
+    write(_channel, HIGH);
   }
 
 
 private:
-  void write(uint8_t data, uint8_t cs, uint8_t en)
+  void write(uint8_t data, uint8_t en)
   {
-    digitalWrite(_CS, cs);
+    digitalWrite(_CS, LOW);
     digitalWrite(_WR, LOW);
 
     digitalWrite(_EN, en);
@@ -106,3 +106,4 @@ private:
 
 
 //  -- END OF FILE --
+
