@@ -16,7 +16,7 @@ Arduino library for ADG732 - 32 to 1 channel multiplexer.
 **Experimental**
 
 ADG732 is an Arduino class that controls a 32 to 1 multiplexers
-over a parallel interface.
+over a **parallel** interface.
 Only one of the 32 channels can be connected at the same time.
 The library also support to set them all off (17th state).
 
@@ -27,9 +27,6 @@ one analog port, or to select between 32 DHT22 sensors.
 
 No tests with hardware have been done yet, so use with care.
 Feedback welcome!
-
-
-TODO insert picture.
 
 
 #### Related
@@ -64,6 +61,7 @@ Valid values for channel are 0..31.
 #### Must
 
 - improve documentation
+  - insert schematic
 - test with hardware
 - keep in sync with ADG731 (interface)
 

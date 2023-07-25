@@ -21,7 +21,7 @@ public:
   ADG732(uint8_t A, uint8_t B, uint8_t C, uint8_t D, uint8_t E, uint8_t CS, uint8_t EN, uint8_t WR)
   {
     uint8_t arr[5] = { A, B, C, D, E };
-    ADG726(arr, CS, EN, WR);
+    ADG732(arr, CS, EN, WR);
   }
 
   explicit ADG732(uint8_t address[5], uint8_t CS, uint8_t EN, uint8_t WR)
@@ -45,7 +45,7 @@ public:
     digitalWrite(_WR, HIGH);
 
     //  default all off.
-    _channel = ADG726_ALLOFF;
+    _channel = ADG732_ALLOFF;
   }
 
 
@@ -85,7 +85,7 @@ private:
     if (en == LOW)
     {
       uint8_t mask = 0x01;
-      for (int i = 0; i < 4; i++)
+      for (int i = 0; i < 5; i++)
       {
         digitalWrite(_addr[i], ((data & mask) > 0));
         mask <<= 1;
@@ -97,13 +97,11 @@ private:
     digitalWrite(_CS, HIGH);
   }
 
-  uint8_t  _addr[4];
-  uint8_t  _CSA;
-  uint8_t  _CSB;
+  uint8_t  _addr[5];
+  uint8_t  _CS;
   uint8_t  _EN;
   uint8_t  _WR;
-  uint8_t  _channelA;
-  uint8_t  _channelB;
+  uint8_t  _channel;
 };
 
 
