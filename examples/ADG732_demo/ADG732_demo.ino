@@ -12,6 +12,7 @@ ADG732 ADG(4, 5, 6, 7, 8, 9, 10, 11);
 
 uint32_t start, stop;
 
+
 void setup()
 {
   Serial.begin(115200);
