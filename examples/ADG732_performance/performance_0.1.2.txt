@@ -2,6 +2,6 @@ Arduino UNO
 IDE:1.8.19
 
 ADG732_LIB_VERSION: 0.1.2
-setChannel:	124.00
+setChannel:	44.63
 
 

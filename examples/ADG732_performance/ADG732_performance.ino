@@ -16,8 +16,8 @@ uint32_t start, stop;
 void setup()
 {
   Serial.begin(115200);
-  Serial.print("ADG731_LIB_VERSION: ");
-  Serial.println(ADG731_LIB_VERSION);
+  Serial.print("ADG732_LIB_VERSION: ");
+  Serial.println(ADG732_LIB_VERSION);
   delay(100);
 
   start = micros();
